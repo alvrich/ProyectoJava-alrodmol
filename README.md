@@ -1,36 +1,45 @@
-# Proyecto del Segundo Cuatrimestre Fundamentos de Programación (Curso  \<XX\>/\<YY\>)
+# Proyecto del Segundo Cuatrimestre Fundamentos de Programación (Curso  \<21\>/\<22\>)
 Autor/a: \<nombre del autor\>   uvus:\<uvus del autor\>
 
-Aquí debes añadir la descripción del dataset y un enunciado del dominio del proyecto.
-
+El dataset recogerá datos de la aplicación Instagram de cieertos usuarios aleatorios para determinar si son perfiles falsos
 
 ## Estructura de las carpetas del proyecto
 
 * **/src**: Contiene los diferentes archivos que forman parte del proyecto. Debe estar estructurado en los siguentes paquetes
-  * **fp.\<dominio\>**: Paquete que contiene los tipos del proyecto.
-  * **fp.\<dominio\>.test**: Paquete que contiene las clases de test del proyecto.
+  * **fp.\<tipos.instagram\>**: Paquete que contiene los tipos del proyecto.
+  * **fp.\<tipos.instagram\>.test**: Paquete que contiene las clases de test del proyecto.
   * **fp.common**: Paquete que contiene los tipos auxiliares del proyecto
   * **fp.utiles**:  Paquete que contiene las clases de utilidad. 
 * **/data**: Contiene el dataset o datasets del proyecto
-    * **\<dataset1.csv\>**: Añade una descripción genérica del dataset.
-    * **\<dataset2.csv\>**: Añade una descripción del resto de datasets que puedas tener.
-    
+    * **\<InstagramBOT.csv\>**: Añade una descripción genérica del dataset.
+    *     
 ## Estructura del *dataset*
 
-Aquí debes describir la estructura del dataset explicando qué representan los datos que contiene y la descripción de cada una de las columnas. Incluye también la URL del dataset original.
+Los datos contenidos en el dataset han sido generados con la herramienta de makroo, ya que el dataset original contenía carácteres extraños.
+
+Cuenta, fechaCreacion, numSeguidores, numSeguidos, genero, numPublicaciones, version
+
+URL del dataset original: http://kaggle.com/bugrayan/instagram-fake-followers
 
 El dataset está compuesto por \<N\> columnas, con la siguiente descripción:
 
-* **\<columna 1>**: de tipo \<tipo\>, representa....
-* **\<columna 2>**: de tipo \<tipo\>, representa....
+* **\<Cuenta>**: de tipo \<String\>, representa el nombre de usuario de la cuenta
+* **\<fechaCreacion**: de tipo \<LocalDate\>, representa la fecha de la creacion de la cuenta
+* **\<numSeguidores>**: de tipo \<Integer\>, representa el numero de seguidores de la cuenta
+* **\<numSeguidos>**: de tipo \<Integer\>, representa el numero de seguidos de la cuenta
+* **\<genero>**: de tipo \<Enum\>, representa el genero del usuario
+* **\<numPublicaciones>**: de tipo \<Integer\>, representa el numero de publicaciones de la cuenta
+* **\<version>**: de tipo \<Double\>, representa la version de la aplicacion
+
 ....
 
 ## Tipos implementados
 
-Describe aquí los tipos que usas en tu proyecto.
+se implementa el tipo Bot de tipo \<Boolean>\ que nos permitirá saber si el usuario es sospechoso de ser falso
 
 ### Tipo Base
-Descripción breve del tipo base.
+
+El tipo base consta de todos los datos del csv para su lectura y comprension
 
 **Propiedades**:
 
